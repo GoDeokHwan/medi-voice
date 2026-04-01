@@ -1,6 +1,5 @@
 package com.medi.voice.medivoice.global.config;
 
-import com.medi.voice.medivoice.domain.review.crawler.ModoodacReviewCrawler;
 import com.medi.voice.medivoice.global.binder.ModoodacProperty;
 import com.medi.voice.medivoice.infrastructure.modoodac.service.ModoodacCrawlingService;
 import com.medi.voice.medivoice.infrastructure.modoodac.service.v1.ModoodacCrawlingServiceV1;

@@ -1,6 +1,5 @@
 package com.medi.voice.medivoice.global.config;
 
-import com.medi.voice.medivoice.domain.review.crawler.NaverReviewCrawler;
 import com.medi.voice.medivoice.global.binder.NaverPlaceProperty;
 import com.medi.voice.medivoice.infrastructure.naver.service.NaverPlaceCrawlingService;
 import com.medi.voice.medivoice.infrastructure.naver.service.v1.NaverPlaceCrawlingServiceV1;
