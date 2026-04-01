@@ -5,7 +5,9 @@ import com.medi.voice.medivoice.domain.review.dto.CrawlResult;
 import com.medi.voice.medivoice.domain.review.dto.PlatformTypeEnum;
 import com.medi.voice.medivoice.infrastructure.naver.service.NaverPlaceCrawlPayload;
 import com.medi.voice.medivoice.infrastructure.naver.service.NaverPlaceCrawlingService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class NaverReviewCrawler implements ReviewCrawler {
     private final NaverPlaceCrawlingService naverPlaceCrawlingService;
 

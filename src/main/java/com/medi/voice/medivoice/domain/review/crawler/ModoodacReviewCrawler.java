@@ -5,13 +5,15 @@ import com.medi.voice.medivoice.domain.review.dto.CrawlResult;
 import com.medi.voice.medivoice.domain.review.dto.PlatformTypeEnum;
 import com.medi.voice.medivoice.infrastructure.modoodac.service.ModoodacCrawlPayload;
 import com.medi.voice.medivoice.infrastructure.modoodac.service.ModoodacCrawlingService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
 public class ModoodacReviewCrawler implements ReviewCrawler {
     private final ModoodacCrawlingService modoodacCrawlingService;
+
+    public ModoodacReviewCrawler(ModoodacCrawlingService modoodacCrawlingService) {
+        this.modoodacCrawlingService = modoodacCrawlingService;
+    }
 
     @Override
     public PlatformTypeEnum platformType() {
