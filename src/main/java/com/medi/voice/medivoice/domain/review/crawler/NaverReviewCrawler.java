@@ -3,24 +3,24 @@ package com.medi.voice.medivoice.domain.review.crawler;
 import com.medi.voice.medivoice.domain.review.dto.CrawlCommand;
 import com.medi.voice.medivoice.domain.review.dto.CrawlResult;
 import com.medi.voice.medivoice.domain.review.dto.PlatformTypeEnum;
-import com.medi.voice.medivoice.infrastructure.modoodac.service.ModoodacCrawlPayload;
-import com.medi.voice.medivoice.infrastructure.modoodac.service.ModoodacCrawlingService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
+import com.medi.voice.medivoice.infrastructure.naver.service.NaverPlaceCrawlPayload;
+import com.medi.voice.medivoice.infrastructure.naver.service.NaverPlaceCrawlingService;
 
-@Component
-@RequiredArgsConstructor
-public class ModoodacReviewCrawler implements ReviewCrawler {
-    private final ModoodacCrawlingService modoodacCrawlingService;
+public class NaverReviewCrawler implements ReviewCrawler {
+    private final NaverPlaceCrawlingService naverPlaceCrawlingService;
+
+    public NaverReviewCrawler(NaverPlaceCrawlingService naverPlaceCrawlingService) {
+        this.naverPlaceCrawlingService = naverPlaceCrawlingService;
+    }
 
     @Override
     public PlatformTypeEnum platformType() {
-        return PlatformTypeEnum.MODOODAC;
+        return PlatformTypeEnum.NAVER_PLACE;
     }
 
     @Override
     public CrawlResult crawl(CrawlCommand command) {
-        ModoodacCrawlPayload payload = modoodacCrawlingService.crawl(
+        NaverPlaceCrawlPayload payload = naverPlaceCrawlingService.crawl(
                 command.targetUrl(),
                 command.clinicId(),
                 command.options()

@@ -4,9 +4,23 @@ spring:
 
 modoodac:
   auth:
-    email: ${MODOODAC_EMAIL:dhdh9224@gmail.com}
-    password: ${MODOODAC_PASSWORD:Webgis12!}
+    email: ${MODOODAC_EMAIL:}
+    password: ${MODOODAC_PASSWORD:}
   crawl:
     clinic-id: 7396
     target-url: https://www.modoodoc.com/hospital/7396/%EB%B9%84%EC%95%A4%EB%B9%9B%EA%B0%95%EB%82%A8%EB%B0%9D%EC%9D%80%EC%84%B8%EC%83%81%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90-%EC%84%9C%EC%9A%B8-%EC%84%9C%EC%B4%88%EB%8F%99/?tg=%EC%8B%9C%EB%A0%A5%EA%B5%90%EC%A0%95%EC%88%A0
+    cookie: ${MODOODAC_COOKIE:}
+    bearer-token: ${MODOODAC_BEARER_TOKEN:}
 
+naver:
+  place:
+    crawl:
+      place-id: 11538152
+      target-url: https://map.naver.com/p/search/%EB%B9%84%EC%95%A4%EB%B9%9B/place/11538152?c=15.00,0,0,3,dh&placePath=/review?bk_query=%EB%B9%84%EC%95%A4%EB%B9%9B&from=map&fromPanelNum=2&locale=ko&searchText=%EB%B9%84%EC%95%A4%EB%B9%9B&svcName=map_pcv5&timestamp=202604012120&entry=bmp
+      referer: https://map.naver.com/p/search/%EB%B9%84%EC%95%A4%EB%B9%9B/place/11538152?c=15.00,0,0,3,dh&placePath=/review?bk_query=%EB%B9%84%EC%95%A4%EB%B9%9B&from=map&fromPanelNum=2&locale=ko&searchText=%EB%B9%84%EC%95%A4%EB%B9%9B&svcName=map_pcv5&timestamp=202604012120&entry=bmp
+      display: 10
+      max-pages: 1
+      business-type: place
+      booking-business-id: "null"
+      item: "0"
+      sort: recent
